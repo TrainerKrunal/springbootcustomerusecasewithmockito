@@ -39,10 +39,13 @@ public class CustomerServiceTest {
 		//Mock
 		List<Customer> customers=new ArrayList<>(Arrays.asList(c1,c2,c3));
 
-		Mockito.when(customerDAO.getAllCustomers()).thenReturn(customers);    // It is my MOCK method to check what getAllCustomers() returns
+		// It is my MOCK method to check what getAllCustomers() returns
+
+		Mockito.when(customerDAO.getAllCustomers()).thenReturn(customers);  
 		
 		//When
-		List<Customer> customersReturned=customerService.getAllCustomers();   // Calling actual method of customerservice.getAllCustomers();
+		// Calling actual method of customerservice.getAllCustomers();
+		List<Customer> customersReturned=customerService.getAllCustomers();   
 
 
 		//Then

@@ -21,7 +21,7 @@ public class HelloController {
 	}
 	
 	
-	@GetMapping("/welcome")
+	@GetMapping("/welcome")1
 	public String welcomeMessage() {
 		return "Welcome to SCB";
 	}
@@ -37,12 +37,10 @@ public class HelloController {
 		return empnames;
 	}
 	
-	@GetMapping("/user/{id}/{name}")
-	public String testPathVariable(@PathVariable int id,@PathVariable String name) {
-		
-		String result = "User at ID# " + id+" is" + name ;
+	@GetMapping("/users/{id}/{name}")
+	public String testVariables(@PathVariable int id,@PathVariable String name) {
+		String result="Your name is " + name +"Your id is "+id;
 		return result;
-		
 	}
 	
 	@GetMapping(path="/hello-world-entity")

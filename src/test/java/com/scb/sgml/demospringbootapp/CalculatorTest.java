@@ -28,7 +28,7 @@ public class CalculatorTest {
 
 	@Test
 	public void testAddition() {
-		int expected=20;
+		int expected=30;
 		int actual=calculator.add(10, 10);
 
 		assertEquals(expected, actual);
